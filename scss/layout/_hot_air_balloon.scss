@@ -1,0 +1,46 @@
+.hot__air__balloon {
+  animation: hot-air-ballon 8s infinite linear;
+  border-radius: 50%;
+  height: 50px;
+  left: 50%;
+  position: absolute;
+  width: 50px;
+  z-index: 10;
+
+  @media screen and (min-width: 1200px) {
+    z-index: 11;
+  }
+
+  &__cage {
+    border-top-style: solid;
+    border-top-width: 25px;
+    border-left-style: solid;
+    border-left-width: 2px;
+    border-right-style: solid;
+    border-right-width: 2px;
+    height: 0;
+    left: 8px;
+    top: 52px;
+    position: absolute;
+    width: 35px;
+    z-index: 10;
+  }
+}
+
+.background__night {
+  .hot__air__balloon {
+    animation: sinking-ballon 5s linear;
+    bottom: -100px;
+  }
+}
+
+@keyframes hot-air-ballon {
+  0% { bottom: 13% }
+  50% { bottom: 9% }
+  100% { bottom: 13% }
+}
+
+@keyframes sinking-ballon {
+  0% { bottom: 12%; }
+  100% { bottom: -100px; }
+}

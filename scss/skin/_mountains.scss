@@ -1,0 +1,50 @@
+@use 'mixins';
+
+:root {
+  --mountain: #7ac1e4;
+  --mountain-top: #ceeaf6;
+}
+
+.mountain__big {
+  border-bottom-color: var(--mountain);
+  @include mixins.transparent_border;
+
+  .mountain__top { 
+    border-bottom-color: var(--mountain-top);
+    @include mixins.transparent_border;
+    &__cap__one {
+      border-top-color: var(--mountain-top); 
+      @include mixins.transparent_border;
+    }
+    &__cap__two {
+      border-top-color: var(--mountain-top);
+      @include mixins.transparent_border;
+    }
+    &__cap__three {
+      border-top-color: var(--mountain-top);
+      @include mixins.transparent_border;
+    }
+  }
+}
+
+.mountain__small {
+  border-bottom-color: var(--mountain);
+  @include mixins.transparent_border;
+  
+  .mountain__top {
+    border-bottom-color: var(--mountain-top);
+    @include mixins.transparent_border;
+    &__cap__one {
+      border-top-color: var(--mountain-top); 
+      @include mixins.transparent_border;
+    }
+    &__cap__two { 
+      border-top-color: var(--mountain-top); 
+      @include mixins.transparent_border;
+    }
+    &__cap__three { 
+      border-top-color: var(--mountain-top);
+      @include mixins.transparent_border;
+    }
+  }
+}

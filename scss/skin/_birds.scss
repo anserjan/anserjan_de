@@ -1,0 +1,12 @@
+:root {
+  --black: #000000;
+  --brown: #2F3540;
+}
+
+.bird, .bird::before, .bird::after, .bird__black, .bird__black::before, .bird__black::after {
+  background-color: var(--brown);
+}
+
+.bird__brown, .bird__borwn::before, .bird__brown::after {
+  background-color: var(--black);
+}

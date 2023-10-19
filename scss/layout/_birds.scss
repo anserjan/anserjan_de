@@ -1,0 +1,57 @@
+@use 'mixins';
+// flying($x, $y, $duration: 20)
+// bird($height: 5px, $width: 8px)
+
+.bird {
+  border-radius: 50%;
+  position: absolute;
+  z-index: 7;
+}
+
+// wings
+.bird::before, .bird::after {
+  border-radius: 50%;
+  content: ' ';
+  display: block;
+  left: 3px;
+  height: 5px;
+  position: absolute;
+  width: 10px;
+}
+
+.bird::before {
+  animation: bottom_wings .8s infinite;
+  top: 4px;
+  transform: rotate(40deg);
+}
+
+.bird::after {
+  animation: top_wings .8s infinite;
+  top: -4px;
+  transform: rotate(310deg);
+}
+
+.bird__left { 
+  @include mixins.bird(6px, 18px);
+  bottom: 50%;
+  left: 50%;
+  @include mixins.flying(18, 10, 20);
+}
+
+@keyframes bottom_wings {
+  50% {
+    transform: rotate(120deg);
+  }
+  100% {
+    transform: rotate(40deg);
+  }  
+}
+
+@keyframes top_wings {
+  50% {
+    transform: rotate(230deg);
+  }
+  100% {
+    transform: rotate(310deg);
+  }
+}

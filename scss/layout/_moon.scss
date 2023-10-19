@@ -1,0 +1,29 @@
+.moon {
+  animation: sinking-moon 5s linear;
+  bottom: -100px;
+  display: none;
+  position: absolute;
+}
+
+.background__night {
+  .moon {
+    animation: rising-moon 5s linear;
+    display: block;
+    border-radius: 50%;
+    height: 80px;
+    right: 8%;
+    transform: translate3d(0,0,0);
+    top: 20%;
+    width: 80px;
+  }
+}
+
+@keyframes rising-moon {
+  0% { right: 0%; top: 40%; }
+  100% { top: 20%; }
+}
+
+@keyframes sinking-moon {
+  0% { right: 8%; }
+  100% { right: 0%; }
+}

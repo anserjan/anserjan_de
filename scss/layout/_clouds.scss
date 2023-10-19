@@ -1,0 +1,142 @@
+.clouds, .clouds::before, .clouds::after {
+  border-radius: 100px / 60px;
+  left: -300px;
+  position: absolute;
+  z-index: 5;
+}
+
+.clouds::before, .clouds::after {
+  content: '';
+}
+
+// cloud size
+.cloud__big__size {
+  height: 50px;
+  width: 240px;
+}
+
+.cloud__big__size::before {
+  height: 40px;
+  left: 10px;
+  width: 190px;
+}
+
+.cloud__big__size::after {
+  height: 50px;
+  left: 25px;
+  width: 200px;
+}
+// ---
+.cloud__medium__size {
+  height: 30px;
+  width: 160px;
+}
+
+.cloud__medium__size::before {
+  height: 30px;
+  left: 20px;
+  width: 140px;
+}
+
+.cloud__medium__size::after {
+  height: 30px;
+  left: 0;
+  width: 150px;
+}
+// ----
+.cloud__small__size {
+  height: 30px;
+  width: 80px;
+}
+
+.cloud__small__size::before {
+  height: 30px;
+  left: 22px;
+  width: 80px;
+}
+
+.cloud__small__size::after {
+  height: 30px;
+  left: -10px;
+  width: 80px;
+}
+
+// cloud level
+.cloud__top__level {
+  bottom: 430px;
+}
+
+.cloud__top__level::before {
+  bottom: 24px;
+}
+
+.cloud__top__level::after {
+  bottom: -22px;
+}
+// ---
+.cloud__middle__level {
+  bottom: 300px;
+}
+
+.cloud__middle__level::before {
+  bottom: 5px;
+}
+
+.cloud__middle__level::after {
+  bottom: -15px;
+}
+// ----
+.cloud__low__level {
+  bottom: 150px;
+}
+
+.cloud__low__level::before {
+  bottom: 10px;
+}
+
+.cloud__low__level::after {
+  bottom: 18px;
+}
+
+// cloud speed
+.cloud__slow__speed {
+  animation: clouds 50s infinite linear;
+}
+
+.cloud__middle__speed {
+  animation: clouds 48s infinite linear;
+}
+
+.cloud__fast__speed {
+  animation: clouds 45s infinite linear;
+}
+
+// cloud delay 
+.cloud__delay__two {
+  animation-delay: 2s;
+}
+
+.cloud__delay__four {
+  animation-delay: 4s;
+}
+
+.cloud__delay__six {
+  animation-delay: 6s;
+}
+
+.cloud__delay__ten {
+  animation-delay: 10s;
+}
+
+.cloud__delay__twenty {
+ animation-delay: 20s;
+}
+
+.cloud__delay__thirty {
+  animation-delay: 30s;
+}
+
+@keyframes clouds {
+  0% { left: -300px; }
+  100% { left: 100%; }
+}

@@ -1,0 +1,13 @@
+.background {
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.background__night {
+  height: 100%;
+  position: relative;
+  transition: background-color 5s;
+  width: 100%;
+}

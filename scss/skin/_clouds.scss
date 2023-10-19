@@ -1,0 +1,14 @@
+:root {
+  --cloud: #ffffff;
+  --cloud-night-color: #8a8f9c;
+}
+
+.clouds, .clouds::before, .clouds::after {
+  background: var(--cloud);
+}
+
+.background__night {
+  .clouds, .clouds::after, .clouds::before {
+    background: var(--cloud-night-color)
+  }
+}

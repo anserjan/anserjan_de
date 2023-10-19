@@ -1,0 +1,26 @@
+.form { 
+  margin: 2em 16px;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  width: 90%;
+  @media screen and (min-width: 1200px) {
+    width: 100%;
+  }
+}
+
+.article {
+  margin: 0 16px;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  width: 90%;
+  @media screen and (min-width: 1200px) {
+    width: 100%;
+  }
+}
+
+.scrolling { animation: rotate_image 2s; }
+
+@keyframes rotate_image {
+  0% { rotate: 0deg }
+  100% {rotate: 360deg }
+}

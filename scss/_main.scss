@@ -1,0 +1,52 @@
+@import 'foundation';
+
+@import 'layout/articles';
+@import 'layout/background';
+@import 'layout/birds';
+@import 'layout/clouds';
+@import 'layout/hot_air_balloon';
+@import 'layout/moon';
+@import 'layout/mountains';
+@import 'layout/sun';
+
+@import 'skin/articles';
+@import 'skin/background';
+@import 'skin/birds';
+@import 'skin/clouds';
+@import 'skin/hot_air_balloon';
+@import 'skin/moon';
+@import 'skin/mountains';
+@import 'skin/sun';
+
+:root {
+  --text-color: #000000;
+}
+
+.html {
+  height: 100%;
+  width: 100%;
+}
+
+.body {
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  max-width: 992px;
+  width: 100%;
+  
+  @media screen and (min-width: 1200px) {
+    margin: 0 auto;
+  }
+}
+
+.background__night {
+  .main {
+    background: black;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 11;
+  }
+}

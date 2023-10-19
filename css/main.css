@@ -1,0 +1,833 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+:root {
+  line-height: 1.3;
+}
+
+.body {
+  margin: 0;
+}
+
+.h1 {
+  font-size: 1.6rem;
+}
+
+.h2 {
+  font-size: 1.4rem;
+}
+
+.h3 {
+  font-size: 1.2rem;
+}
+
+.article, .table, .ul {
+  font-size: 1.1rem;
+}
+
+.a {
+  text-decoration: none;
+}
+
+.ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.img {
+  max-width: 100%;
+}
+
+.form {
+  margin: 2em 16px;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  width: 90%;
+}
+@media screen and (min-width: 1200px) {
+  .form {
+    width: 100%;
+  }
+}
+
+.article {
+  margin: 0 16px;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  width: 90%;
+}
+@media screen and (min-width: 1200px) {
+  .article {
+    width: 100%;
+  }
+}
+
+.scrolling {
+  animation: rotate_image 2s;
+}
+
+@keyframes rotate_image {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+.background {
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.background__night {
+  height: 100%;
+  position: relative;
+  transition: background-color 5s;
+  width: 100%;
+}
+
+.bird {
+  border-radius: 50%;
+  position: absolute;
+  z-index: 7;
+}
+
+.bird::before, .bird::after {
+  border-radius: 50%;
+  content: " ";
+  display: block;
+  left: 3px;
+  height: 5px;
+  position: absolute;
+  width: 10px;
+}
+
+.bird::before {
+  animation: bottom_wings 0.8s infinite;
+  top: 4px;
+  transform: rotate(40deg);
+}
+
+.bird::after {
+  animation: top_wings 0.8s infinite;
+  top: -4px;
+  transform: rotate(310deg);
+}
+
+.bird__left {
+  height: 6px;
+  width: 18px;
+  bottom: 50%;
+  left: 50%;
+  animation: flying_animation 20s infinite linear;
+}
+@keyframes flying_animation {
+  0% {
+    bottom: 11%;
+    left: 20%;
+  }
+  5% {
+    bottom: 12%;
+    left: 22%;
+  }
+  10% {
+    bottom: 13%;
+    left: 24%;
+  }
+  15% {
+    bottom: 14%;
+    left: 26%;
+  }
+  20% {
+    bottom: 15%;
+    left: 28%;
+  }
+  25% {
+    bottom: 16%;
+    left: 30%;
+  }
+  30% {
+    bottom: 15%;
+    left: 32%;
+  }
+  35% {
+    bottom: 14%;
+    left: 34%;
+  }
+  40% {
+    bottom: 13%;
+    left: 36%;
+  }
+  45% {
+    bottom: 12%;
+    left: 38%;
+  }
+  50% {
+    bottom: 11%;
+    left: 40%;
+  }
+  55% {
+    bottom: 10%;
+    left: 38%;
+  }
+  60% {
+    bottom: 9%;
+    left: 36%;
+  }
+  65% {
+    bottom: 8%;
+    left: 34%;
+  }
+  70% {
+    bottom: 7%;
+    left: 32%;
+  }
+  75% {
+    bottom: 6%;
+    left: 30%;
+  }
+  80% {
+    bottom: 7%;
+    left: 28%;
+  }
+  85% {
+    bottom: 8%;
+    left: 26%;
+  }
+  90% {
+    bottom: 9%;
+    left: 24%;
+  }
+  95% {
+    bottom: 10%;
+    left: 22%;
+  }
+  100% {
+    bottom: 11%;
+    left: 20%;
+  }
+}
+
+@keyframes bottom_wings {
+  50% {
+    transform: rotate(120deg);
+  }
+  100% {
+    transform: rotate(40deg);
+  }
+}
+@keyframes top_wings {
+  50% {
+    transform: rotate(230deg);
+  }
+  100% {
+    transform: rotate(310deg);
+  }
+}
+.clouds, .clouds::before, .clouds::after {
+  border-radius: 100px/60px;
+  left: -300px;
+  position: absolute;
+  z-index: 5;
+}
+
+.clouds::before, .clouds::after {
+  content: "";
+}
+
+.cloud__big__size {
+  height: 50px;
+  width: 240px;
+}
+
+.cloud__big__size::before {
+  height: 40px;
+  left: 10px;
+  width: 190px;
+}
+
+.cloud__big__size::after {
+  height: 50px;
+  left: 25px;
+  width: 200px;
+}
+
+.cloud__medium__size {
+  height: 30px;
+  width: 160px;
+}
+
+.cloud__medium__size::before {
+  height: 30px;
+  left: 20px;
+  width: 140px;
+}
+
+.cloud__medium__size::after {
+  height: 30px;
+  left: 0;
+  width: 150px;
+}
+
+.cloud__small__size {
+  height: 30px;
+  width: 80px;
+}
+
+.cloud__small__size::before {
+  height: 30px;
+  left: 22px;
+  width: 80px;
+}
+
+.cloud__small__size::after {
+  height: 30px;
+  left: -10px;
+  width: 80px;
+}
+
+.cloud__top__level {
+  bottom: 430px;
+}
+
+.cloud__top__level::before {
+  bottom: 24px;
+}
+
+.cloud__top__level::after {
+  bottom: -22px;
+}
+
+.cloud__middle__level {
+  bottom: 300px;
+}
+
+.cloud__middle__level::before {
+  bottom: 5px;
+}
+
+.cloud__middle__level::after {
+  bottom: -15px;
+}
+
+.cloud__low__level {
+  bottom: 150px;
+}
+
+.cloud__low__level::before {
+  bottom: 10px;
+}
+
+.cloud__low__level::after {
+  bottom: 18px;
+}
+
+.cloud__slow__speed {
+  animation: clouds 50s infinite linear;
+}
+
+.cloud__middle__speed {
+  animation: clouds 48s infinite linear;
+}
+
+.cloud__fast__speed {
+  animation: clouds 45s infinite linear;
+}
+
+.cloud__delay__two {
+  animation-delay: 2s;
+}
+
+.cloud__delay__four {
+  animation-delay: 4s;
+}
+
+.cloud__delay__six {
+  animation-delay: 6s;
+}
+
+.cloud__delay__ten {
+  animation-delay: 10s;
+}
+
+.cloud__delay__twenty {
+  animation-delay: 20s;
+}
+
+.cloud__delay__thirty {
+  animation-delay: 30s;
+}
+
+@keyframes clouds {
+  0% {
+    left: -300px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+.hot__air__balloon {
+  animation: hot-air-ballon 8s infinite linear;
+  border-radius: 50%;
+  height: 50px;
+  left: 50%;
+  position: absolute;
+  width: 50px;
+  z-index: 10;
+}
+@media screen and (min-width: 1200px) {
+  .hot__air__balloon {
+    z-index: 11;
+  }
+}
+.hot__air__balloon__cage {
+  border-top-style: solid;
+  border-top-width: 25px;
+  border-left-style: solid;
+  border-left-width: 2px;
+  border-right-style: solid;
+  border-right-width: 2px;
+  height: 0;
+  left: 8px;
+  top: 52px;
+  position: absolute;
+  width: 35px;
+  z-index: 10;
+}
+
+.background__night .hot__air__balloon {
+  animation: sinking-ballon 5s linear;
+  bottom: -100px;
+}
+
+@keyframes hot-air-ballon {
+  0% {
+    bottom: 13%;
+  }
+  50% {
+    bottom: 9%;
+  }
+  100% {
+    bottom: 13%;
+  }
+}
+@keyframes sinking-ballon {
+  0% {
+    bottom: 12%;
+  }
+  100% {
+    bottom: -100px;
+  }
+}
+.moon {
+  animation: sinking-moon 5s linear;
+  bottom: -100px;
+  display: none;
+  position: absolute;
+}
+
+.background__night .moon {
+  animation: rising-moon 5s linear;
+  display: block;
+  border-radius: 50%;
+  height: 80px;
+  right: 8%;
+  transform: translate3d(0, 0, 0);
+  top: 20%;
+  width: 80px;
+}
+
+@keyframes rising-moon {
+  0% {
+    right: 0%;
+    top: 40%;
+  }
+  100% {
+    top: 20%;
+  }
+}
+@keyframes sinking-moon {
+  0% {
+    right: 8%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+.mountains {
+  bottom: 0;
+  position: absolute;
+}
+
+.mountain__big {
+  border-left-style: solid;
+  border-left-width: 300px;
+  border-right-style: solid;
+  border-right-width: 300px;
+  border-bottom-style: solid;
+  border-bottom-width: 360px;
+  position: absolute;
+}
+.mountain__big .mountain__top {
+  border-left-style: solid;
+  border-left-width: 130px;
+  border-right-style: solid;
+  border-right-width: 130px;
+  border-bottom-style: solid;
+  border-bottom-width: 156px;
+  position: absolute;
+  right: -130px;
+}
+.mountain__big .mountain__top__cap__one {
+  border-left-style: solid;
+  border-left-width: 50px;
+  border-right-style: solid;
+  border-right-width: 50px;
+  border-top-style: solid;
+  border-top-width: 50px;
+  position: absolute;
+  left: -110px;
+  top: 140px;
+}
+.mountain__big .mountain__top__cap__two {
+  border-left-style: solid;
+  border-left-width: 50px;
+  border-right-style: solid;
+  border-right-width: 50px;
+  border-top-style: solid;
+  border-top-width: 50px;
+  position: absolute;
+  left: -50px;
+  top: 140px;
+}
+.mountain__big .mountain__top__cap__three {
+  border-left-style: solid;
+  border-left-width: 50px;
+  border-right-style: solid;
+  border-right-width: 50px;
+  border-top-style: solid;
+  border-top-width: 50px;
+  position: absolute;
+  left: 10px;
+  top: 140px;
+}
+
+.mountain__small {
+  border-left-style: solid;
+  border-left-width: 150px;
+  border-right-style: solid;
+  border-right-width: 150px;
+  border-bottom-style: solid;
+  border-bottom-width: 160px;
+  position: absolute;
+}
+.mountain__small .mountain__top {
+  border-left-style: solid;
+  border-left-width: 65px;
+  border-right-style: solid;
+  border-right-width: 65px;
+  border-bottom-style: solid;
+  border-bottom-width: 70px;
+  position: absolute;
+  right: -65px;
+}
+.mountain__small .mountain__top__cap__one {
+  border-left-style: solid;
+  border-left-width: 25px;
+  border-right-style: solid;
+  border-right-width: 25px;
+  border-top-style: solid;
+  border-top-width: 25px;
+  position: absolute;
+  left: -55px;
+  top: 69px;
+}
+.mountain__small .mountain__top__cap__two {
+  border-left-style: solid;
+  border-left-width: 25px;
+  border-right-style: solid;
+  border-right-width: 25px;
+  border-top-style: solid;
+  border-top-width: 25px;
+  position: absolute;
+  left: -25px;
+  top: 69px;
+}
+.mountain__small .mountain__top__cap__three {
+  border-left-style: solid;
+  border-left-width: 25px;
+  border-right-style: solid;
+  border-right-width: 25px;
+  border-top-style: solid;
+  border-top-width: 25px;
+  position: absolute;
+  left: 5px;
+  top: 69px;
+}
+
+.mountain__background {
+  z-index: 4;
+}
+
+.mountain__foreground {
+  z-index: 6;
+}
+
+.mountain__transparent {
+  opacity: 0.8;
+}
+
+.mountain__left {
+  left: 0;
+}
+
+.mountain__right {
+  right: 0%;
+}
+
+.mountain__light__right {
+  left: 50%;
+}
+
+.mountain__light__left {
+  right: 50%;
+}
+
+@media screen and (max-width: 1200px) {
+  .mountain__no__mobile {
+    display: none;
+  }
+}
+
+.sun {
+  animation: sun 180s infinite linear;
+  border-radius: 50%;
+  height: 100px;
+  position: absolute;
+  transform: translate3d(0, 0, 0);
+  width: 100px;
+}
+
+.background__night .sun {
+  animation: sun 5s linear;
+  bottom: -100px;
+}
+
+@keyframes sun {
+  0% {
+    left: 0%;
+    top: 40%;
+  }
+  10% {
+    left: 10%;
+    top: 24%;
+  }
+  20% {
+    left: 20%;
+    top: 12%;
+  }
+  30% {
+    left: 30%;
+    top: 7%;
+  }
+  40% {
+    left: 40%;
+    top: 1%;
+  }
+  50% {
+    left: 50%;
+    top: 1%;
+  }
+  60% {
+    left: 60%;
+    top: 1%;
+  }
+  70% {
+    left: 70%;
+    top: 7%;
+  }
+  80% {
+    left: 80%;
+    top: 12%;
+  }
+  90% {
+    left: 90%;
+    top: 24%;
+  }
+  100% {
+    left: 100%;
+    top: 40%;
+  }
+}
+:root {
+  --text-color: #c2c5cc;
+}
+
+.article, .h1, .h2, .h3, .p, .label, .form, .input {
+  color: var(--text-color);
+}
+
+:root {
+  --background-color: #b4ddf0;
+  --nightmode-background-color: #2e4482;
+}
+
+.background {
+  background-color: var(--background-color);
+}
+
+.background__night {
+  background-color: var(--nightmode-background-color);
+}
+
+:root {
+  --black: #000000;
+  --brown: #2F3540;
+}
+
+.bird, .bird::before, .bird::after, .bird__black, .bird__black::before, .bird__black::after {
+  background-color: var(--brown);
+}
+
+.bird__brown, .bird__borwn::before, .bird__brown::after {
+  background-color: var(--black);
+}
+
+:root {
+  --cloud: #ffffff;
+  --cloud-night-color: #8a8f9c;
+}
+
+.clouds, .clouds::before, .clouds::after {
+  background: var(--cloud);
+}
+
+.background__night .clouds, .background__night .clouds::after, .background__night .clouds::before {
+  background: var(--cloud-night-color);
+}
+
+:root {
+  --ballon-color: #ff0000;
+  --cage-color: #96613d;
+}
+
+.hot__air__balloon {
+  background: var(--ballon-color);
+}
+.hot__air__balloon__cage {
+  border-top-color: var(--cage-color);
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+:root {
+  --moon-color: #c2c5cc;
+}
+
+.background__night .moon {
+  background: var(--moon-color);
+}
+
+:root {
+  --mountain: #7ac1e4;
+  --mountain-top: #ceeaf6;
+}
+
+.mountain__big {
+  border-bottom-color: var(--mountain);
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.mountain__big .mountain__top {
+  border-bottom-color: var(--mountain-top);
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.mountain__big .mountain__top__cap__one {
+  border-top-color: var(--mountain-top);
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.mountain__big .mountain__top__cap__two {
+  border-top-color: var(--mountain-top);
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.mountain__big .mountain__top__cap__three {
+  border-top-color: var(--mountain-top);
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+.mountain__small {
+  border-bottom-color: var(--mountain);
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.mountain__small .mountain__top {
+  border-bottom-color: var(--mountain-top);
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.mountain__small .mountain__top__cap__one {
+  border-top-color: var(--mountain-top);
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.mountain__small .mountain__top__cap__two {
+  border-top-color: var(--mountain-top);
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.mountain__small .mountain__top__cap__three {
+  border-top-color: var(--mountain-top);
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+:root {
+  --sun-color: #fce570;
+}
+
+.sun {
+  background: var(--sun-color);
+}
+
+:root {
+  --text-color: #000000;
+}
+
+.html {
+  height: 100%;
+  width: 100%;
+}
+
+.body {
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  max-width: 992px;
+  width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .main {
+    margin: 0 auto;
+  }
+}
+
+.background__night .main {
+  background: black;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 11;
+}
+
+/*# sourceMappingURL=main.css.map */

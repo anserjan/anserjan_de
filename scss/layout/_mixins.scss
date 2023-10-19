@@ -1,0 +1,50 @@
+@mixin mountain_cap($size) {
+  border-left-style: solid;
+  border-left-width: $size;
+  border-right-style: solid;
+  border-right-width: $size;
+  border-top-style: solid;
+  border-top-width: $size;
+  position: absolute;
+}
+
+@mixin irregular_mountain_cap($side-size, $bottom-size) {
+  border-left-style: solid;
+  border-left-width: $side-size;
+  border-right-style: solid;
+  border-right-width: $side-size;
+  border-bottom-style: solid;
+  border-bottom-width: $bottom-size;
+  position: absolute;
+}
+
+@mixin bird($height: 5px, $width: 8px) {
+  height: $height;
+  width: $width;
+}
+
+@mixin flying($x, $y, $duration) {
+  animation: flying_animation #{$duration + "s"} infinite linear;
+
+  @keyframes flying_animation {
+    @for $i from 0 through 20 {
+      @if $i <= 5 {
+        $x: $x + 2;
+        $y: $y + 1;
+      } @else if $i <= 10  {
+        $x: $x + 2;
+        $y: $y - 1;
+      } @else if $i <= 15{
+        $x: $x - 2;
+        $y: $y - 1;
+      } @else {
+        $x: $x - 2;
+        $y: $y + 1;
+      }
+      #{$i * 5%} {
+        bottom: #{$y * 1%};
+        left: #{$x * 1%};
+      }
+    }
+  }
+}

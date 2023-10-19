@@ -1,0 +1,14 @@
+:root {
+  --ballon-color: #ff0000;
+  --cage-color: #96613d;
+}
+
+.hot__air__balloon {
+  background: var(--ballon-color);
+  
+  &__cage {
+    border-top-color: var(--cage-color);
+    border-left-color: transparent;
+    border-right-color: transparent;
+  }
+}

@@ -1,0 +1,5 @@
+:root { --text-color: #c2c5cc; }
+
+.article, .h1, .h2, .h3, .p, .label,.form, .input {
+  color: var(--text-color);
+}

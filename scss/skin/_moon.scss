@@ -1,0 +1,5 @@
+:root { --moon-color: #c2c5cc; }
+
+.background__night {
+  .moon { background: var(--moon-color); }
+}

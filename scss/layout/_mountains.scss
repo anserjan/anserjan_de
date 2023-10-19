@@ -1,0 +1,75 @@
+@use 'mixins';
+
+.mountains {
+  bottom: 0;
+  position: absolute;
+}
+
+.mountain__big {
+  @include mixins.irregular_mountain_cap(300px, 360px);
+
+  .mountain__top {
+    @include mixins.irregular_mountain_cap(130px, 156px);
+    right: -130px;
+
+    &__cap__one {
+      @include mixins.mountain_cap(50px);
+      left: -110px;
+      top: 140px;
+    }
+
+    &__cap__two {
+      @include mixins.mountain_cap(50px);
+      left: -50px;
+      top: 140px;
+    }
+    &__cap__three {
+      @include mixins.mountain_cap(50px);
+      left: 10px;
+      top: 140px;
+    }
+  }
+}
+
+.mountain__small {
+  @include mixins.irregular_mountain_cap(150px, 160px);
+
+  .mountain__top {
+    @include mixins.irregular_mountain_cap(65px, 70px);
+    right: -65px;
+
+    &__cap__one {
+      @include mixins.mountain_cap(25px);
+      left: -55px;
+      top: 69px;
+    }
+
+    &__cap__two {
+      @include mixins.mountain_cap(25px);
+      left: -25px;
+      top: 69px;
+    }
+
+    &__cap__three {
+      @include mixins.mountain_cap(25px);
+      left: 5px;
+      top: 69px;
+    }
+  }
+}
+
+.mountain__background { z-index: 4; }
+.mountain__foreground { z-index: 6; }
+
+.mountain__transparent{ opacity: .8; }
+
+.mountain__left { left: 0; }
+.mountain__right { right: 0%; }
+.mountain__light__right { left: 50%; }
+.mountain__light__left { right: 50%; }
+
+.mountain__no__mobile {
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+}

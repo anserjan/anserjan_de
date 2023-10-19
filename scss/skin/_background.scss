@@ -1,0 +1,7 @@
+:root {
+  --background-color: #b4ddf0;
+  --nightmode-background-color: #2e4482;
+}
+
+.background { background-color: var(--background-color); }
+.background__night { background-color: var(--nightmode-background-color); }
